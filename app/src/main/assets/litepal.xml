@@ -1,0 +1,7 @@
+<litepal>
+    <dbname value="MyData"></dbname>
+    <version value="2"></version>
+    <list>
+        <mapping class="com.example.mymvp.db.ProvinceDb"></mapping>
+    </list>
+</litepal>

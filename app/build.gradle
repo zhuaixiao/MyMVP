@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.mymvp"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //dagger
+    implementation 'com.google.dagger:dagger:2.19'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.19'
+    //Rxjava
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.3'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    //android6.0以上版本权限请求
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+    //retrofit2
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    //Json数据解析
+    implementation 'com.google.code.gson:gson:2.8.5'
+    //图片加载
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    //屏幕适配
+    implementation 'me.jessyan:autosize:1.0.5'
+    //上拉刷新，下拉加载控件
+    implementation 'com.jwenfeng.pulltorefresh:library:1.2.7'
+    //数据库
+    implementation 'org.litepal.android:core:1.4.1'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.4.0'
+}
